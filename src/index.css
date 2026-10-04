@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+:root {
+  --color-canvas-light: #FAF9F6;
+  --color-surface-light: #FFFFFF;
+  --color-canvas-dark: #1E2D35;
+  --color-surface-dark: #131E24;
+  --color-ink-primary: #11181C;
+  --color-ink-secondary: #4A5860;
+  --color-ink-muted: #73828C;
+  --color-brand-navy: #1E2D35;
+  --color-brand-accent: #B87333;
+  --color-brand-accent-hover: #965B27;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-canvas-light);
+  color: var(--color-ink-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Classes */
+.font-heading, .font-serif {
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+.tracking-architectural {
+  letter-spacing: 0.15em;
+}
+
+.transition-luxury {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Image Zoom Effect */
+.image-zoom-container {
+  overflow: hidden;
+}
+
+.image-zoom-container img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-zoom-container:hover img {
+  transform: scale(1.03);
+}
+
+/* Custom Scrollbar in Slate Navy & Warm Cedar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #131E24;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E2D35;
+  border-radius: 4px;
+  border: 1px solid #B87333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B87333;
+}
