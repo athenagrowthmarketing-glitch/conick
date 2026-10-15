@@ -7,29 +7,41 @@ import MasterGallery from '../components/MasterGallery'
 export default function PorchesPage() {
   return (
     <div className="bg-[#FAF9F6]">
-      {/* Header */}
-      <section className="bg-[#1E2D35] text-white py-16 lg:py-24 border-b border-white/10 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Page Hero Header */}
+      <section className="relative min-h-[520px] lg:min-h-[580px] flex flex-col justify-center text-white overflow-hidden border-b border-white/10">
+        {/* Full-Bleed Panoramic Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-100"
+          style={{ 
+            backgroundImage: "url('/images/projects/porch-covered-outdoor-living-kitchen.jpg')",
+            backgroundPosition: 'center 45%'
+          }}
+        />
+
+        {/* Cinematic Dark Gradient Vignette Overlay for Crisp Readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 lg:py-28">
           <div className="max-w-3xl">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#B87333] font-semibold bg-white/10 px-3 py-1 rounded-full border border-white/15">
+            <span className="inline-flex items-center gap-2 bg-[#B87333]/25 border border-[#B87333]/50 text-[#E0A96D] text-xs font-mono uppercase tracking-widest px-3.5 py-1.5 rounded-full backdrop-blur-md mb-4 font-semibold">
               Sheltered Outdoor Living
             </span>
-            <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white mt-4 mb-6">
+            <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white drop-shadow-md mb-6 leading-tight">
               Covered Porches & Screened-In Retreats.
             </h1>
-            <p className="font-sans text-white/80 text-base sm:text-lg leading-relaxed mb-8">
+            <p className="font-sans text-white/95 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 drop-shadow max-w-2xl font-normal">
               Protect your family from harsh midday sun and seasonal rain while keeping Carolina bugs outside. We build covered porches that integrate seamlessly into your home’s existing rooflines.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a
                 href="#estimate"
-                className="bg-[#B87333] hover:bg-[#965B27] text-white font-heading font-bold text-xs uppercase tracking-wider px-7 py-3.5 rounded shadow-lg transition-all"
+                className="bg-[#B87333] hover:bg-[#965B27] text-white font-heading font-bold text-xs uppercase tracking-wider px-8 py-4 rounded shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95"
               >
                 Estimate Your Porch Addition
               </a>
               <a
                 href="tel:+17813991906"
-                className="bg-white/10 hover:bg-white/15 text-white font-sans font-semibold text-xs px-6 py-3.5 rounded transition-all"
+                className="bg-black/40 hover:bg-black/60 border border-white/30 text-white font-sans font-semibold text-xs px-6 py-4 rounded backdrop-blur-md transition-all"
               >
                 Call Renato: (781) 399-1906
               </a>

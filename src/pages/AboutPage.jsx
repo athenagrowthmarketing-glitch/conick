@@ -6,17 +6,29 @@ import EstimateSection from '../components/EstimateSection'
 export default function AboutPage() {
   return (
     <div className="bg-[#FAF9F6]">
-      {/* Header */}
-      <section className="bg-[#1E2D35] text-white py-16 lg:py-24 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Page Hero Header */}
+      <section className="relative min-h-[500px] lg:min-h-[560px] flex flex-col justify-center text-white overflow-hidden border-b border-white/10">
+        {/* Full-Bleed Panoramic Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-100"
+          style={{ 
+            backgroundImage: "url('/images/projects/deck-twotier-brick-angle.jpg')",
+            backgroundPosition: 'center 35%'
+          }}
+        />
+
+        {/* Cinematic Dark Gradient Vignette Overlay for Crisp Readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/85 pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 lg:py-28">
           <div className="max-w-3xl">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#B87333] font-semibold bg-white/10 px-3 py-1 rounded-full border border-white/15">
+            <span className="inline-flex items-center gap-2 bg-[#B87333]/25 border border-[#B87333]/50 text-[#E0A96D] text-xs font-mono uppercase tracking-widest px-3.5 py-1.5 rounded-full backdrop-blur-md mb-4 font-semibold">
               Owner-Led Craftsmanship
             </span>
-            <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white mt-4 mb-6">
+            <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white drop-shadow-md mb-6 leading-tight">
               The Story & Standard Behind Conick Construction.
             </h1>
-            <p className="font-sans text-white/80 text-base sm:text-lg leading-relaxed">
+            <p className="font-sans text-white/95 text-base sm:text-lg lg:text-xl leading-relaxed drop-shadow max-w-2xl font-normal">
               We started Conick Construction in Woodruff, South Carolina with one mission: to bring authentic master carpentry, clean jobsites, and direct owner accountability to every outdoor living project.
             </p>
           </div>
