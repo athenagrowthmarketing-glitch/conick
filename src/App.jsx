@@ -1,11 +1,12 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import MobileStickyBar from './components/MobileStickyBar'
 
 import HomePage from './pages/HomePage'
+import OutdoorLivingPage from './pages/OutdoorLivingPage'
 import DecksPage from './pages/DecksPage'
 import PorchesPage from './pages/PorchesPage'
 import DeckReplacementPage from './pages/DeckReplacementPage'
@@ -18,13 +19,17 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
 import TermsPage from './pages/TermsPage'
 
 export default function App() {
+  const location = useLocation()
+  const isPpc = location.pathname === '/outdoor-living' || location.pathname.startsWith('/outdoor-living')
+
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF9F6] text-[#11181C]">
       <ScrollToTop />
-      <Navbar />
+      {!isPpc && <Navbar />}
       <div className="flex-1">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/outdoor-living" element={<OutdoorLivingPage />} />
           <Route path="/decks" element={<DecksPage />} />
           <Route path="/covered-porches" element={<PorchesPage />} />
           <Route path="/deck-replacement" element={<DeckReplacementPage />} />
@@ -38,8 +43,8 @@ export default function App() {
           <Route path="*" element={<HomePage />} />
         </Routes>
       </div>
-      <Footer />
-      <MobileStickyBar />
+      {!isPpc && <Footer />}
+      {!isPpc && <MobileStickyBar />}
     </div>
   )
 }

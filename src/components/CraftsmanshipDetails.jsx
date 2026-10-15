@@ -6,26 +6,26 @@ export default function CraftsmanshipDetails() {
     {
       title: "Picture-Frame Perimeter Borders",
       category: "Architectural Bordering",
-      image: "/images/projects/project_03.jpg",
+      image: "/images/projects/detail-switchback-stairs-overhead.jpg",
       description: "Crisp 45-degree mitered border boards frame the deck footprint, concealing rough board ends and creating a tailored furniture-grade look."
     },
     {
-      title: "Integrated Under-Deck Storage",
+      title: "Integrated Under-Deck Storage & Soffit",
       category: "Functional Carpentry",
-      image: "/images/projects/project_08.jpg",
+      image: "/images/projects/detail-understair-composite-soffit.jpg",
       description: "Custom slatted skirt walls with seamless latching access doors turn unused slope space into dry, ventilated lawn and equipment storage."
     },
     {
       title: "Custom Built-In Perimeter Benches",
       category: "Built-In Elements",
-      image: "/images/projects/project_05.jpg",
+      image: "/images/projects/detail-composite-bench-corner.jpg",
       description: "Structural wrap-around seating built directly from matching composite lumber, eliminating cluttered outdoor furniture."
     },
     {
-      title: "Double Staircases & Baluster Rhythms",
-      category: "Egress & Elevation",
-      image: "/images/projects/project_15.jpg",
-      description: "Symmetrical stair runs with closed stringers, code-compliant riser heights, and continuous handrail ergonomics for maximum comfort."
+      title: "Engineered Heavy Timber Framing",
+      category: "Structural Integrity",
+      image: "/images/projects/detail-heavy-timber-framing.jpg",
+      description: "Notched 6x6 support posts, butyl joist tape, and structural carriage bolts designed to exceed Upstate SC building codes."
     }
   ]
 

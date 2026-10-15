@@ -11,8 +11,8 @@ export default function PortfolioGrid() {
       category: 'decks',
       title: "The Woodruff Multi-Level Estate Deck",
       location: "Woodruff, SC",
-      image: "/images/projects/project_07.jpg",
-      gallery: ["/images/projects/project_07.jpg", "/images/projects/project_15.jpg", "/images/projects/project_06.jpg"],
+      image: "/images/projects/deck-twotier-brick-angle.jpg",
+      gallery: ["/images/projects/deck-twotier-brick-angle.jpg", "/images/projects/deck-luxury-composite-grey.jpg", "/images/projects/deck-composite-woodland-view.jpg"],
       specs: "Multi-tier layout • Low-maintenance composite • Powder-coated black railings • Integrated LED post caps",
       description: "An expansive multi-level composite deck designed to solve yard elevation transitions while creating distinct zones for dining, grilling, and evening relaxation."
     },
@@ -21,8 +21,8 @@ export default function PortfolioGrid() {
       category: 'decks',
       title: "The High-Stilt Deck & Weatherproof Storage",
       location: "Greenville County, SC",
-      image: "/images/projects/project_02.jpg",
-      gallery: ["/images/projects/project_02.jpg", "/images/projects/project_08.jpg"],
+      image: "/images/projects/deck-composite-side-view.jpg",
+      gallery: ["/images/projects/deck-composite-side-view.jpg", "/images/projects/detail-understair-composite-soffit.jpg", "/images/projects/deck-composite-stairs-ground.jpg"],
       specs: "Elevated framing • Custom horizontal slatted skirting • Hinged latch storage door • Fall foliage views",
       description: "Elevated second-story deck build engineered with heavy-duty structural posts and a ventilated under-deck enclosure for lawn mower and garden tool storage."
     },
@@ -31,8 +31,8 @@ export default function PortfolioGrid() {
       category: 'decks',
       title: "The Brick Manor Grand Terrace",
       location: "Upstate SC",
-      image: "/images/projects/project_14.jpg",
-      gallery: ["/images/projects/project_14.jpg", "/images/projects/project_03.jpg", "/images/projects/project_01.jpg"],
+      image: "/images/projects/drone-brick-manor-full.jpg",
+      gallery: ["/images/projects/drone-brick-manor-full.jpg", "/images/projects/drone-estate-brick-terrace.jpg", "/images/projects/deck-estate-sunlight.jpg"],
       specs: "Dual grand staircases • Symmetrical egress • Custom balusters • Reinforced foundation footers",
       description: "A showpiece luxury deck built onto a grand brick estate, featuring twin curved staircases meeting at a center landing and picture-frame mitered borders."
     },
@@ -41,8 +41,8 @@ export default function PortfolioGrid() {
       category: 'details',
       title: "Custom Built-In Perimeter Lounge Deck",
       location: "Spartanburg, SC",
-      image: "/images/projects/project_05.jpg",
-      gallery: ["/images/projects/project_05.jpg", "/images/projects/project_10.jpg", "/images/projects/project_11.jpg"],
+      image: "/images/projects/drone-geometric-chevron-deck.jpg",
+      gallery: ["/images/projects/drone-geometric-chevron-deck.jpg", "/images/projects/deck-composite-bench-solar-caps.jpg", "/images/projects/detail-composite-bench-corner.jpg"],
       specs: "Integrated L-bench • Stone retaining wall tie-in • Solar cap lights • Concealed clip system",
       description: "Custom carpentry featuring integrated continuous bench seating around deck perimeter, maximizing usable square footage without requiring loose furniture."
     },
@@ -51,8 +51,8 @@ export default function PortfolioGrid() {
       category: 'porches',
       title: "Two-Story Deck & Covered Lower Veranda",
       location: "Anderson, SC",
-      image: "/images/projects/project_16.jpg",
-      gallery: ["/images/projects/project_16.jpg", "/images/projects/project_17.jpg"],
+      image: "/images/projects/porch-covered-outdoor-living-kitchen.jpg",
+      gallery: ["/images/projects/porch-covered-outdoor-living-kitchen.jpg", "/images/projects/deck-twostory-covered-lower.jpg", "/images/projects/porch-covered-twostory-view.jpg"],
       specs: "Upper sun deck • Sheltered lower patio • Architectural post wrapping • Moisture drainage barrier",
       description: "A comprehensive two-story outdoor living structure providing open-sky dining on the upper level and cool, sheltered relaxation on the ground patio."
     },
@@ -61,8 +61,8 @@ export default function PortfolioGrid() {
       category: 'porches',
       title: "Architectural Roofline Porch Addition",
       location: "Upstate SC",
-      image: "/images/projects/project_09.jpg",
-      gallery: ["/images/projects/project_09.jpg", "/images/projects/project_12.jpg", "/images/projects/project_13.jpg"],
+      image: "/images/projects/porch-screened-room-combo.jpg",
+      gallery: ["/images/projects/porch-screened-room-combo.jpg", "/images/projects/porch-screened-side-elevation.jpg"],
       specs: "Heavy timber posts • Seamless roofline tie-in • Exterior trim integration • Weatherproof flashing",
       description: "Engineered covered porch extension designed to match existing residential roof pitch and provide dependable year-round weather protection."
     }

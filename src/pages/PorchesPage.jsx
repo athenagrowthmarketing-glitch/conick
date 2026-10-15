@@ -101,7 +101,7 @@ export default function PorchesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="rounded-xl overflow-hidden border border-stone-200 shadow-md">
             <img
-              src="/images/projects/project_16.jpg"
+              src="/images/projects/porch-covered-outdoor-living-kitchen.jpg"
               alt="Two story deck and lower porch addition"
               className="w-full h-80 object-cover"
             />
@@ -113,12 +113,12 @@ export default function PorchesPage() {
 
           <div className="rounded-xl overflow-hidden border border-stone-200 shadow-md">
             <img
-              src="/images/projects/project_09.jpg"
+              src="/images/projects/porch-screened-room-combo.jpg"
               alt="Covered porch framing and roofline"
               className="w-full h-80 object-cover"
             />
             <div className="p-6 bg-white">
-              <h4 className="font-heading font-bold text-lg text-[#11181C]">Architectural Roof Extension</h4>
+              <h4 className="font-heading font-bold text-lg text-[#11181C]">Architectural Roof Extension & Screened Room</h4>
               <p className="text-xs text-stone-600 mt-1">Engineered tie-in to residential shingles, matching overhangs and gutter runs.</p>
             </div>
           </div>

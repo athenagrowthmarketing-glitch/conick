@@ -1,26 +1,44 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Check, ArrowRight, Layers, Shield, Sparkles, SlidersHorizontal } from 'lucide-react'
+import { Check, ArrowRight, Layers, Shield, Sparkles, SlidersHorizontal, Sun, Home, ShieldAlert } from 'lucide-react'
 
 export default function DecksShowcase() {
-  const deckTypes = [
+  const specializations = [
     {
-      title: "Multi-Tier & Elevated Decks",
-      description: "Designed for sloping Upstate SC lots. Multi-level zones create distinct areas for dining, outdoor cooking, and sunbathing while preserving yard flow.",
-      image: "/images/projects/project_07.jpg",
+      title: "Heavy Structural Framing",
+      description: "We build with notched 6x6 posts, engineered concrete footers below frost depth, and protective butyl flashing tape on every joist to eliminate structural rot.",
+      image: "/images/projects/detail-heavy-timber-framing.jpg",
+      tag: "Structural Foundation"
+    },
+    {
+      title: "Premium Composite & PVC Decking",
+      description: "Low-maintenance TimberTech and Trex composite boards that resist Upstate SC heat, humidity, and UV fade. Installed with concealed clips for barefoot comfort.",
+      image: "/images/projects/deck-luxury-composite-grey.jpg",
+      tag: "Decking Surfaces"
+    },
+    {
+      title: "Modern Railings & Drink Rails",
+      description: "Matte black powder-coated aluminum balusters, sleek modern cable rail, and broad composite cocktail drink rails that frame your outdoor views.",
+      image: "/images/projects/deck-estate-white-railing.jpg",
+      tag: "Safety & Style"
+    },
+    {
+      title: "Built-In Seating & Lounges",
+      description: "Custom continuous perimeter benches, planter integrations, and fire table spaces crafted seamlessly from matching composite lumber.",
+      image: "/images/projects/deck-composite-bench-solar-caps.jpg",
+      tag: "Custom Details"
+    },
+    {
+      title: "Multi-Tier & Sloping Lots",
+      description: "Engineered multi-level decks designed for steep topography, creating distinct zones for outdoor dining, grilling, and evening relaxation.",
+      image: "/images/projects/deck-twotier-brick-angle.jpg",
       tag: "Architectural Layout"
     },
     {
-      title: "Elevated Living & Under-Deck Storage",
-      description: "High-stilt deck builds engineered with integrated under-deck skirting, weather-protected storage access, and custom security gates.",
-      image: "/images/projects/project_02.jpg",
-      tag: "Functional Carpentry"
-    },
-    {
-      title: "Custom Built-In Seating & Lounges",
-      description: "Handcrafted perimeter L-benches, cocktail railings, and seamless transitions into stone patios or garden hardscapes.",
-      image: "/images/projects/project_05.jpg",
-      tag: "Custom Details"
+      title: "Integrated Low-Voltage Lighting",
+      description: "Subtle stair riser LED lights, under-rail illumination, and solar-powered post caps that extend your outdoor living deep into the night.",
+      image: "/images/projects/deck-perimeter-white-rail.jpg",
+      tag: "Evening Ambiance"
     }
   ]
 
@@ -54,108 +72,86 @@ export default function DecksShowcase() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="max-w-2xl">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#B87333] font-semibold">
-              Primary Specialization
+            <span className="font-mono text-xs uppercase tracking-widest text-[#B87333] font-semibold bg-[#B87333]/10 px-3.5 py-1 rounded-full border border-[#B87333]/20">
+              Primary Specializations
             </span>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#11181C] tracking-tight mt-2">
-              Custom Decks Engineered for Upstate Homes.
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#11181C] tracking-tight mt-3">
+              Custom Decks Built for Upstate Living.
             </h2>
-            <p className="font-sans text-stone-600 text-base sm:text-lg mt-4 leading-relaxed">
-              From contemporary low-maintenance composite to traditional pressure-treated timber, we engineer every deck for lifelong structural rigidity and barefoot comfort.
+            <p className="font-sans text-stone-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Every home and lot in Upstate SC is unique. We build tailored outdoor spaces engineered to handle summer heat, heavy rain, and steep slopes.
             </p>
           </div>
-          
+
           <Link
             to="/decks"
-            className="inline-flex items-center gap-2 text-sm font-heading font-bold uppercase tracking-wider text-[#B87333] hover:text-[#965B27] pb-1 border-b-2 border-[#B87333] transition-all self-start md:self-auto"
+            className="inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-wider text-[#B87333] hover:text-[#965B27] shrink-0 transition-colors self-start md:self-end"
           >
-            <span>Explore Deck Options</span>
+            <span>Explore Deck Portfolio</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
-        {/* Deck Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          {deckTypes.map((item, idx) => (
+        {/* 6 Specializations Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          {specializations.map((spec, idx) => (
             <div 
               key={idx}
-              className="bg-[#FAF9F6] rounded-lg overflow-hidden border border-stone-200/90 hover:shadow-xl transition-all duration-300 flex flex-col group"
+              className="bg-[#FAF9F6] rounded-xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col group"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-56 overflow-hidden">
                 <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  src={spec.image}
+                  alt={spec.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
-              </div>
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#B87333] font-bold block mb-1.5">
-                    {item.tag}
-                  </span>
-                  <h3 className="font-heading font-bold text-xl text-[#11181C] mb-2 group-hover:text-[#B87333] transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="font-sans text-sm text-[#4A5860] leading-relaxed mb-6">
-                    {item.description}
-                  </p>
+                <div className="absolute top-3 left-3 bg-[#1E2D35]/90 backdrop-blur-sm text-white px-2.5 py-1 rounded text-[10px] font-mono uppercase tracking-wider font-semibold">
+                  {spec.tag}
                 </div>
-                <div className="pt-4 border-t border-stone-200/60 flex items-center justify-between text-xs font-semibold text-[#1E2D35]">
-                  <span>Upstate SC Project</span>
-                  <span className="text-[#B87333] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                    View Details &rarr;
-                  </span>
+              </div>
+
+              <div className="p-6 flex flex-col justify-between flex-1">
+                <div>
+                  <h3 className="font-heading font-bold text-xl text-[#11181C] mb-2 group-hover:text-[#B87333] transition-colors">
+                    {spec.title}
+                  </h3>
+                  <p className="font-sans text-stone-600 text-xs sm:text-sm leading-relaxed">
+                    {spec.description}
+                  </p>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Anatomy of a Conick Deck (Structural Callouts) */}
-        <div className="bg-[#1E2D35] text-white rounded-xl p-8 sm:p-12 border border-white/10 relative overflow-hidden">
+        {/* Framing Anatomy Deep Dive */}
+        <div className="bg-[#1E2D35] text-white rounded-2xl p-8 sm:p-12 border border-white/10 relative overflow-hidden">
           <div className="max-w-3xl mb-10">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#B87333] font-semibold">
-              Behind the Cladding
+            <span className="font-mono text-xs uppercase tracking-widest text-[#B87333] font-semibold bg-white/10 px-3 py-1 rounded-full border border-white/15">
+              Structural Anatomy
             </span>
-            <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight mt-1 mb-3">
-              The Anatomy of a Conick Structural Build
+            <h3 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight mt-3 mb-2">
+              What Separates Conick From Standard Builders
             </h3>
-            <p className="font-sans text-white/80 text-sm sm:text-base leading-relaxed">
-              A gorgeous deck surface is only as good as what lies beneath. Here is how we ensure your deck stays level, silent, and structurally sound for decades.
+            <p className="font-sans text-stone-300 text-sm sm:text-base leading-relaxed">
+              Decks fail not because of boards, but because of improper ledger flashing, weak post connections, and lack of joist protection. We build framing designed to outlast ordinary construction.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4 border-t border-white/10">
             {anatomyPoints.map((point, idx) => {
               const Icon = point.icon
               return (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
-                  <div className="w-10 h-10 rounded bg-[#B87333]/20 text-[#B87333] flex items-center justify-center mb-3">
+                <div key={idx} className="flex flex-col">
+                  <div className="w-10 h-10 rounded-lg bg-[#B87333]/20 text-[#E0A96D] flex items-center justify-center mb-3">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h4 className="font-heading font-bold text-base text-white mb-2">
-                    {point.title}
-                  </h4>
-                  <p className="font-sans text-xs text-white/70 leading-relaxed">
-                    {point.text}
-                  </p>
+                  <h4 className="font-heading font-bold text-sm text-white mb-1.5">{point.title}</h4>
+                  <p className="font-sans text-xs text-stone-300 leading-relaxed">{point.text}</p>
                 </div>
               )
             })}
-          </div>
-
-          <div className="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2 text-xs text-white/80">
-              <Check className="w-4 h-4 text-[#B87333]" />
-              <span>Compliant with all South Carolina and local municipal building codes.</span>
-            </div>
-            <a
-              href="#estimate"
-              className="bg-[#B87333] hover:bg-[#965B27] text-white text-xs font-heading font-bold uppercase tracking-wider px-5 py-2.5 rounded transition-all"
-            >
-              Get Deck Estimate
-            </a>
           </div>
         </div>
 

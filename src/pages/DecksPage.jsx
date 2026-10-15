@@ -56,7 +56,7 @@ export default function DecksPage() {
           <div className="bg-white rounded-xl overflow-hidden border border-stone-200 shadow-sm flex flex-col sm:flex-row">
             <div className="sm:w-1/2 h-64 sm:h-auto relative">
               <img
-                src="/images/projects/project_07.jpg"
+                src="/images/projects/deck-twotier-brick-angle.jpg"
                 alt="Multi-level custom deck"
                 className="w-full h-full object-cover"
               />
@@ -79,7 +79,7 @@ export default function DecksPage() {
           <div className="bg-white rounded-xl overflow-hidden border border-stone-200 shadow-sm flex flex-col sm:flex-row">
             <div className="sm:w-1/2 h-64 sm:h-auto relative">
               <img
-                src="/images/projects/project_02.jpg"
+                src="/images/projects/deck-composite-side-view.jpg"
                 alt="Elevated second-story deck"
                 className="w-full h-full object-cover"
               />
