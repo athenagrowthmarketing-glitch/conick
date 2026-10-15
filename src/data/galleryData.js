@@ -46,14 +46,14 @@ export const galleryProjects = [
   },
   {
     "id": 5,
-    "title": "Dual Staircase Egress Drone Capture #05",
-    "category": "drone",
+    "title": "Dual Symmetrical Grand Staircase Egress #05",
+    "category": "decks",
     "location": "Greer, SC",
     "image": "/images/gallery/conick-gallery-005.jpg",
     "width": 1920,
     "height": 1440,
     "aspectRatio": 1.33,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Capped composite \u2022 Concealed fasteners \u2022 Powder-coated railing"
   },
   {
     "id": 6,
@@ -101,14 +101,14 @@ export const galleryProjects = [
   },
   {
     "id": 10,
-    "title": "Estate Hillside Terrace Aerial Survey #10",
-    "category": "drone",
+    "title": "Estate Hillside Multi-Level Living Terrace #10",
+    "category": "porches",
     "location": "Spartanburg, SC",
     "image": "/images/gallery/conick-gallery-010.jpg",
     "width": 640,
     "height": 481,
     "aspectRatio": 1.33,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Architectural roof tie-in \u2022 Heavy timber posts \u2022 Weatherproof ceiling"
   },
   {
     "id": 11,
@@ -156,14 +156,14 @@ export const galleryProjects = [
   },
   {
     "id": 15,
-    "title": "Overhead Property Scale & Backyard Fit #15",
-    "category": "drone",
+    "title": "Custom Backyard Elevation & Terrace Build #15",
+    "category": "decks",
     "location": "Woodruff, SC",
     "image": "/images/gallery/conick-gallery-015.jpg",
     "width": 640,
     "height": 480,
     "aspectRatio": 1.33,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Capped composite \u2022 Concealed fasteners \u2022 Powder-coated railing"
   },
   {
     "id": 16,
@@ -211,14 +211,14 @@ export const galleryProjects = [
   },
   {
     "id": 20,
-    "title": "Drone View: Geometric Chevron Deck Layout #20",
-    "category": "drone",
+    "title": "Geometric Chevron Pattern Deck Layout #20",
+    "category": "porches",
     "location": "Anderson, SC",
     "image": "/images/gallery/conick-gallery-020.jpg",
     "width": 640,
     "height": 480,
     "aspectRatio": 1.33,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Architectural roof tie-in \u2022 Heavy timber posts \u2022 Weatherproof ceiling"
   },
   {
     "id": 21,
@@ -266,14 +266,14 @@ export const galleryProjects = [
   },
   {
     "id": 25,
-    "title": "Aerial Perspective: Brick Manor Estate #25",
-    "category": "drone",
+    "title": "Brick Manor Estate Multi-Tier Terrace #25",
+    "category": "decks",
     "location": "Simpsonville, SC",
     "image": "/images/gallery/conick-gallery-025.jpg",
     "width": 1600,
     "height": 900,
     "aspectRatio": 1.78,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Capped composite \u2022 Concealed fasteners \u2022 Powder-coated railing"
   },
   {
     "id": 26,
@@ -321,14 +321,14 @@ export const galleryProjects = [
   },
   {
     "id": 30,
-    "title": "Full Backyard Living Footprint Overview #30",
-    "category": "drone",
+    "title": "Expansive Backyard Outdoor Living Suite #30",
+    "category": "porches",
     "location": "Greenville, SC",
     "image": "/images/gallery/conick-gallery-030.jpg",
     "width": 1440,
     "height": 1920,
     "aspectRatio": 0.75,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Architectural roof tie-in \u2022 Heavy timber posts \u2022 Weatherproof ceiling"
   },
   {
     "id": 31,
@@ -376,14 +376,14 @@ export const galleryProjects = [
   },
   {
     "id": 35,
-    "title": "Dual Staircase Egress Drone Capture #35",
-    "category": "drone",
+    "title": "Dual Symmetrical Grand Staircase Egress #35",
+    "category": "decks",
     "location": "Upstate SC",
     "image": "/images/gallery/conick-gallery-035.jpg",
     "width": 1920,
     "height": 1440,
     "aspectRatio": 1.33,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Capped composite \u2022 Concealed fasteners \u2022 Powder-coated railing"
   },
   {
     "id": 36,
@@ -431,14 +431,14 @@ export const galleryProjects = [
   },
   {
     "id": 40,
-    "title": "Estate Hillside Terrace Aerial Survey #40",
-    "category": "drone",
+    "title": "Estate Hillside Multi-Level Living Terrace #40",
+    "category": "porches",
     "location": "Greer, SC",
     "image": "/images/gallery/conick-gallery-040.jpg",
     "width": 1920,
     "height": 1440,
     "aspectRatio": 1.33,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Architectural roof tie-in \u2022 Heavy timber posts \u2022 Weatherproof ceiling"
   },
   {
     "id": 41,
@@ -486,14 +486,14 @@ export const galleryProjects = [
   },
   {
     "id": 45,
-    "title": "Overhead Property Scale & Backyard Fit #45",
-    "category": "drone",
+    "title": "Custom Backyard Elevation & Terrace Build #45",
+    "category": "decks",
     "location": "Spartanburg, SC",
     "image": "/images/gallery/conick-gallery-045.jpg",
     "width": 1920,
     "height": 1440,
     "aspectRatio": 1.33,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Capped composite \u2022 Concealed fasteners \u2022 Powder-coated railing"
   },
   {
     "id": 46,
@@ -541,14 +541,14 @@ export const galleryProjects = [
   },
   {
     "id": 50,
-    "title": "Drone View: Geometric Chevron Deck Layout #50",
-    "category": "drone",
+    "title": "Geometric Chevron Pattern Deck Layout #50",
+    "category": "porches",
     "location": "Woodruff, SC",
     "image": "/images/gallery/conick-gallery-050.jpg",
     "width": 1920,
     "height": 1440,
     "aspectRatio": 1.33,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Architectural roof tie-in \u2022 Heavy timber posts \u2022 Weatherproof ceiling"
   },
   {
     "id": 51,
@@ -596,14 +596,14 @@ export const galleryProjects = [
   },
   {
     "id": 55,
-    "title": "Aerial Perspective: Brick Manor Estate #55",
-    "category": "drone",
+    "title": "Brick Manor Estate Multi-Tier Terrace #55",
+    "category": "decks",
     "location": "Anderson, SC",
     "image": "/images/gallery/conick-gallery-055.jpg",
     "width": 1920,
     "height": 1440,
     "aspectRatio": 1.33,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Capped composite \u2022 Concealed fasteners \u2022 Powder-coated railing"
   },
   {
     "id": 56,
@@ -651,14 +651,14 @@ export const galleryProjects = [
   },
   {
     "id": 60,
-    "title": "Full Backyard Living Footprint Overview #60",
-    "category": "drone",
+    "title": "Expansive Backyard Outdoor Living Suite #60",
+    "category": "porches",
     "location": "Simpsonville, SC",
     "image": "/images/gallery/conick-gallery-060.jpg",
     "width": 1920,
     "height": 1440,
     "aspectRatio": 1.33,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Architectural roof tie-in \u2022 Heavy timber posts \u2022 Weatherproof ceiling"
   },
   {
     "id": 61,
@@ -706,14 +706,14 @@ export const galleryProjects = [
   },
   {
     "id": 65,
-    "title": "Dual Staircase Egress Drone Capture #65",
-    "category": "drone",
+    "title": "Dual Symmetrical Grand Staircase Egress #65",
+    "category": "decks",
     "location": "Greenville, SC",
     "image": "/images/gallery/conick-gallery-065.jpg",
     "width": 1440,
     "height": 1920,
     "aspectRatio": 0.75,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Capped composite \u2022 Concealed fasteners \u2022 Powder-coated railing"
   },
   {
     "id": 66,
@@ -761,14 +761,14 @@ export const galleryProjects = [
   },
   {
     "id": 70,
-    "title": "Estate Hillside Terrace Aerial Survey #70",
-    "category": "drone",
+    "title": "Estate Hillside Multi-Level Living Terrace #70",
+    "category": "porches",
     "location": "Upstate SC",
     "image": "/images/gallery/conick-gallery-070.jpg",
     "width": 1920,
     "height": 1440,
     "aspectRatio": 1.33,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Architectural roof tie-in \u2022 Heavy timber posts \u2022 Weatherproof ceiling"
   },
   {
     "id": 71,
@@ -816,14 +816,14 @@ export const galleryProjects = [
   },
   {
     "id": 75,
-    "title": "Overhead Property Scale & Backyard Fit #75",
-    "category": "drone",
+    "title": "Custom Backyard Elevation & Terrace Build #75",
+    "category": "decks",
     "location": "Greer, SC",
     "image": "/images/gallery/conick-gallery-075.jpg",
     "width": 1440,
     "height": 1920,
     "aspectRatio": 0.75,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Capped composite \u2022 Concealed fasteners \u2022 Powder-coated railing"
   },
   {
     "id": 76,
@@ -871,14 +871,14 @@ export const galleryProjects = [
   },
   {
     "id": 80,
-    "title": "Drone View: Geometric Chevron Deck Layout #80",
-    "category": "drone",
+    "title": "Geometric Chevron Pattern Deck Layout #80",
+    "category": "porches",
     "location": "Spartanburg, SC",
     "image": "/images/gallery/conick-gallery-080.jpg",
     "width": 1440,
     "height": 1920,
     "aspectRatio": 0.75,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Architectural roof tie-in \u2022 Heavy timber posts \u2022 Weatherproof ceiling"
   },
   {
     "id": 81,
@@ -926,14 +926,14 @@ export const galleryProjects = [
   },
   {
     "id": 85,
-    "title": "Aerial Perspective: Brick Manor Estate #85",
-    "category": "drone",
+    "title": "Brick Manor Estate Multi-Tier Terrace #85",
+    "category": "decks",
     "location": "Woodruff, SC",
     "image": "/images/gallery/conick-gallery-085.jpg",
     "width": 1440,
     "height": 1920,
     "aspectRatio": 0.75,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Capped composite \u2022 Concealed fasteners \u2022 Powder-coated railing"
   },
   {
     "id": 86,
@@ -981,14 +981,14 @@ export const galleryProjects = [
   },
   {
     "id": 90,
-    "title": "Full Backyard Living Footprint Overview #90",
-    "category": "drone",
+    "title": "Expansive Backyard Outdoor Living Suite #90",
+    "category": "porches",
     "location": "Anderson, SC",
     "image": "/images/gallery/conick-gallery-090.jpg",
     "width": 1440,
     "height": 1920,
     "aspectRatio": 0.75,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Architectural roof tie-in \u2022 Heavy timber posts \u2022 Weatherproof ceiling"
   },
   {
     "id": 91,
@@ -1036,14 +1036,14 @@ export const galleryProjects = [
   },
   {
     "id": 95,
-    "title": "Dual Staircase Egress Drone Capture #95",
-    "category": "drone",
+    "title": "Dual Symmetrical Grand Staircase Egress #95",
+    "category": "decks",
     "location": "Simpsonville, SC",
     "image": "/images/gallery/conick-gallery-095.jpg",
     "width": 1440,
     "height": 1920,
     "aspectRatio": 0.75,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Capped composite \u2022 Concealed fasteners \u2022 Powder-coated railing"
   },
   {
     "id": 96,
@@ -1091,14 +1091,14 @@ export const galleryProjects = [
   },
   {
     "id": 100,
-    "title": "Estate Hillside Terrace Aerial Survey #100",
-    "category": "drone",
+    "title": "Estate Hillside Multi-Level Living Terrace #100",
+    "category": "porches",
     "location": "Greenville, SC",
     "image": "/images/gallery/conick-gallery-100.jpg",
     "width": 1920,
     "height": 1080,
     "aspectRatio": 1.78,
-    "specs": "High-altitude aerial \u2022 Complete lot perspective \u2022 Site integration"
+    "specs": "Architectural roof tie-in \u2022 Heavy timber posts \u2022 Weatherproof ceiling"
   },
   {
     "id": 101,

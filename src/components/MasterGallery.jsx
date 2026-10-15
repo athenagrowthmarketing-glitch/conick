@@ -19,8 +19,7 @@ export default function MasterGallery({ title, subtitle, maxInitial = 16, showFi
     { id: 'decks', label: 'Composite Decks' },
     { id: 'porches', label: 'Covered Porches' },
     { id: 'framing', label: 'Structural Framing' },
-    { id: 'details', label: 'Custom Details' },
-    { id: 'drone', label: 'Drone Perspectives' }
+    { id: 'details', label: 'Custom Details' }
   ]
 
   const handleNextModal = (e) => {

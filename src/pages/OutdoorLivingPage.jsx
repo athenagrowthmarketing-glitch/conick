@@ -252,82 +252,6 @@ export default function OutdoorLivingPage() {
             </a>
           </div>
         </div>
-
-        {/* Bottom Trust Strip Badges (1:1 with Screenshot Badges Row) */}
-        <div className="relative z-10 w-full pb-8 sm:pb-12 pt-6">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
-              
-              {/* Badge 1: Google Reviews 5 Stars */}
-              <div className="bg-white px-3.5 sm:px-5 py-2 sm:py-2.5 rounded shadow-lg flex flex-col items-center justify-center border border-stone-200 min-w-[130px] sm:min-w-[155px] h-[58px] sm:h-[66px] transition-transform hover:scale-105">
-                <div className="flex items-center gap-1 mb-0.5">
-                  <span className="text-[10px] sm:text-[11px] font-bold text-stone-700">5 Stars</span>
-                  <div className="flex text-[#FBBC05]">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <div className="flex items-center gap-1">
-                  <span className="font-heading font-extrabold text-sm sm:text-base tracking-tight">
-                    <span className="text-[#4285F4]">G</span>
-                    <span className="text-[#EA4335]">o</span>
-                    <span className="text-[#FBBC05]">o</span>
-                    <span className="text-[#4285F4]">g</span>
-                    <span className="text-[#34A853]">l</span>
-                    <span className="text-[#EA4335]">e</span>
-                  </span>
-                  <span className="text-[9px] sm:text-[10px] font-sans font-semibold text-stone-600 uppercase tracking-wider ml-1">Reviews</span>
-                </div>
-              </div>
-
-              {/* Badge 2: Approved Professional Builder */}
-              <div className="bg-[#1E2D35]/95 backdrop-blur-sm border border-white/20 px-3.5 sm:px-4 py-2 rounded shadow-lg flex items-center gap-2.5 min-w-[140px] sm:min-w-[165px] h-[58px] sm:h-[66px] transition-transform hover:scale-105">
-                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20 shrink-0">
-                  <HardHat className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                </div>
-                <div className="text-left">
-                  <span className="block text-[8px] font-mono uppercase tracking-widest text-[#E0A96D] font-bold">APPROVED</span>
-                  <span className="block text-[10px] sm:text-[11px] font-heading font-extrabold text-white leading-tight uppercase">Professional<br/>Builder</span>
-                </div>
-              </div>
-
-              {/* Badge 3: TimberTech Platinum Pro */}
-              <div className="bg-[#141C20]/95 backdrop-blur-sm border border-[#C5A059]/50 px-3.5 sm:px-4 py-2 rounded shadow-lg flex items-center gap-2.5 min-w-[140px] sm:min-w-[165px] h-[58px] sm:h-[66px] transition-transform hover:scale-105">
-                <div className="w-8 h-8 rounded bg-gradient-to-br from-[#E0A96D] via-[#B87333] to-[#8C5226] flex items-center justify-center font-heading font-extrabold text-xs text-white shadow shrink-0">
-                  TT
-                </div>
-                <div className="text-left">
-                  <span className="block text-[10px] sm:text-[11px] font-heading font-bold text-[#E0A96D] tracking-wide leading-tight">TimberTech</span>
-                  <span className="block text-[8px] sm:text-[9px] font-mono uppercase tracking-wider text-white/90 font-semibold">Platinum Pro</span>
-                </div>
-              </div>
-
-              {/* Badge 4: BBB Accredited */}
-              <div className="bg-[#005A70]/95 backdrop-blur-sm text-white px-3.5 sm:px-4 py-2 rounded shadow-lg flex items-center gap-2.5 min-w-[140px] sm:min-w-[165px] h-[58px] sm:h-[66px] border border-cyan-400/30 transition-transform hover:scale-105">
-                <div className="font-serif font-black text-lg sm:text-xl tracking-tighter text-white border-r border-white/30 pr-2 shrink-0">
-                  BBB
-                </div>
-                <div className="text-left">
-                  <span className="block text-[8px] sm:text-[9px] font-sans font-bold uppercase tracking-wider text-cyan-200">Accredited</span>
-                  <span className="block text-[10px] sm:text-[11px] font-heading font-extrabold text-white uppercase leading-none">Business</span>
-                </div>
-              </div>
-
-              {/* Badge 5: NADRA */}
-              <div className="bg-white px-3.5 sm:px-4 py-2 rounded shadow-lg flex items-center gap-2.5 min-w-[140px] sm:min-w-[165px] h-[58px] sm:h-[66px] border border-stone-200 transition-transform hover:scale-105">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded bg-[#2D5A27] flex items-center justify-center text-white font-heading font-black text-xs shrink-0 shadow-sm">
-                  N
-                </div>
-                <div className="text-left">
-                  <span className="block text-[11px] sm:text-[13px] font-heading font-black tracking-tight text-[#2D5A27] leading-none">NADRA</span>
-                  <span className="block text-[8px] sm:text-[9px] font-sans text-stone-600 leading-tight">Deck & Railing Assoc.</span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Consultation Funnel Section */}
@@ -778,7 +702,7 @@ export default function OutdoorLivingPage() {
       {/* Complete Project Archive (100+ Jobs) */}
       <MasterGallery 
         title="Complete Portfolio of 100+ Real Builds"
-        subtitle="Explore verified custom composite decks, covered porches, engineered framing, and drone captures across Upstate South Carolina."
+        subtitle="Explore verified custom composite decks, covered porches, engineered framing, and architectural details across Upstate South Carolina."
         maxInitial={16}
         showFilters={true}
       />

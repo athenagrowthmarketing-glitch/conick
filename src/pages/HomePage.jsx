@@ -29,7 +29,7 @@ export default function HomePage() {
       <PortfolioGrid />
       <MasterGallery 
         title="Complete Upstate SC Project Archive (100+ Real Builds)"
-        subtitle="Filter by composite decks, covered porches, engineered framing, custom carpentry, and drone surveys. No stock photos."
+        subtitle="Filter by composite decks, covered porches, engineered framing, and custom carpentry details. No stock photos."
         maxInitial={12}
         showFilters={true}
       />

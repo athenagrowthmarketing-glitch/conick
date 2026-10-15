@@ -24,7 +24,7 @@ export default function ProjectsPage() {
       {/* Master 101-Photo Gallery */}
       <MasterGallery 
         title="Complete Portfolio of 100+ Completed Builds"
-        subtitle="Filter by composite decks, covered porches, engineered framing, custom details, and drone perspectives. Every single project is an authentic Conick Construction jobsite in Upstate SC."
+        subtitle="Filter by composite decks, covered porches, engineered framing, and custom craftsmanship details. Every single project is an authentic Conick Construction jobsite in Upstate SC."
         maxInitial={24}
         showFilters={true}
       />
