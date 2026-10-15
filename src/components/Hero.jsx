@@ -18,7 +18,7 @@ export default function Hero() {
         <a
           href="#estimate"
           onClick={scrollToEstimate}
-          className="bg-[#C5221F] hover:bg-[#A31816] text-white text-[11px] font-heading font-extrabold uppercase tracking-widest py-4 px-2.5 rounded-l shadow-2xl flex items-center justify-center [writing-mode:vertical-rl] transition-transform hover:-translate-x-1 cursor-pointer border-l border-t border-b border-red-400/30"
+          className="bg-[#B87333] hover:bg-[#965B27] text-white text-[11px] font-heading font-extrabold uppercase tracking-widest py-4 px-2.5 rounded-l shadow-2xl flex items-center justify-center [writing-mode:vertical-rl] transition-transform hover:-translate-x-1 cursor-pointer border-l border-t border-b border-[#E0A96D]/40"
           style={{ textOrientation: 'mixed' }}
         >
           GET A CONSULTATION
