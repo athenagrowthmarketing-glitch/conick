@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { galleryProjects } from '../data/galleryData'
-import { MapPin, Maximize2, X, ChevronLeft, ChevronRight, Check, ArrowRight, Layers, Sparkles } from 'lucide-react'
+import { Maximize2, X, ChevronLeft, ChevronRight, Check, ArrowRight, Layers, Sparkles } from 'lucide-react'
 
 export default function MasterGallery({ title, subtitle, maxInitial = 16, showFilters = true }) {
   const [activeFilter, setActiveFilter] = useState('all')

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { MapPin, Maximize2, X, Check, ArrowRight } from 'lucide-react'
+import { Maximize2, X, Check, ArrowRight } from 'lucide-react'
 
 export default function PortfolioGrid() {
   const [activeFilter, setActiveFilter] = useState('all')
@@ -47,7 +47,7 @@ export default function PortfolioGrid() {
       category: 'porches',
       title: "Two-Story Deck & Covered Lower Veranda",
       image: "/images/projects/porch-covered-outdoor-living-kitchen.jpg",
-      gallery: ["/images/projects/porch-covered-outdoor-living-kitchen.jpg", "/images/projects/deck-twostory-covered-lower.jpg", "/images/projects/porch-covered-twostory-view.jpg"],
+      gallery: ["/images/projects/porch-covered-outdoor-living-kitchen.jpg", "/images/projects/deck-twostory-covered-lower.jpg"],
       specs: "Upper sun deck • Sheltered lower patio • Architectural post wrapping • Moisture drainage barrier",
       description: "A comprehensive two-story outdoor living structure providing open-sky dining on the upper level and cool, sheltered relaxation on the ground patio."
     },
