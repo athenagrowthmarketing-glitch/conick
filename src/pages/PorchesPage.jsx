@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Umbrella, Wind, SunMedium, Check, ArrowRight, ShieldCheck } from 'lucide-react'
 import EstimateSection from '../components/EstimateSection'
+import MasterGallery from '../components/MasterGallery'
 
 export default function PorchesPage() {
   return (
@@ -123,8 +124,15 @@ export default function PorchesPage() {
             </div>
           </div>
         </div>
-
       </section>
+
+      {/* Real Porches & Screened Rooms Gallery */}
+      <MasterGallery 
+        title="Authentic Covered Porch & Screened Room Projects"
+        subtitle="Explore our gallery of open-air shade structures, integrated rooflines, and bug-free enclosures across Upstate SC."
+        maxInitial={16}
+        showFilters={false}
+      />
 
       {/* Estimate Funnel */}
       <EstimateSection />

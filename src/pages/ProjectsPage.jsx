@@ -1,5 +1,5 @@
 import React from 'react'
-import PortfolioGrid from '../components/PortfolioGrid'
+import MasterGallery from '../components/MasterGallery'
 import BeforeAfterSlider from '../components/BeforeAfterSlider'
 import EstimateSection from '../components/EstimateSection'
 
@@ -21,8 +21,13 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Main Portfolio Grid */}
-      <PortfolioGrid />
+      {/* Master 101-Photo Gallery */}
+      <MasterGallery 
+        title="Complete Portfolio of 100+ Completed Builds"
+        subtitle="Filter by composite decks, covered porches, engineered framing, custom details, and drone perspectives. Every single project is an authentic Conick Construction jobsite in Upstate SC."
+        maxInitial={24}
+        showFilters={true}
+      />
 
       {/* Before / After Slider */}
       <BeforeAfterSlider />

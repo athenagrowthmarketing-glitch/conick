@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Check, Shield, Layers, Sparkles, ArrowRight, Phone } from 'lucide-react'
 import EstimateSection from '../components/EstimateSection'
 import BeforeAfterSlider from '../components/BeforeAfterSlider'
+import MasterGallery from '../components/MasterGallery'
 
 export default function DecksPage() {
   return (
@@ -149,6 +150,14 @@ export default function DecksPage() {
 
       {/* Structural Before/After */}
       <BeforeAfterSlider />
+
+      {/* Real Deck Builds Gallery */}
+      <MasterGallery 
+        title="Authentic Upstate SC Custom Deck Projects"
+        subtitle="Explore our library of multi-level terraces, low-maintenance composite builds, and custom stair runs."
+        maxInitial={16}
+        showFilters={false}
+      />
 
       {/* Estimate Section */}
       <EstimateSection />

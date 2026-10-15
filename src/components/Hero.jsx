@@ -1,345 +1,151 @@
-import React, { useState } from 'react'
-import { ArrowRight, Phone, ShieldCheck, MapPin, CheckCircle2, Clock, Calendar, Check, AlertCircle, Loader2 } from 'lucide-react'
+import React from 'react'
+import { ArrowRight, Phone, ShieldCheck, MapPin, CheckCircle2, Star, Award, HardHat, Shield } from 'lucide-react'
 
 export default function Hero() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    phone: '',
-    email: '',
-    address: '',
-    projectType: 'Custom Composite Deck',
-    budget: '$30,000 – $50,000',
-    notes: ''
-  })
-  const [status, setStatus] = useState('idle') // idle | submitting | success | error
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = async (e) => {
+  const scrollToEstimate = (e) => {
     e.preventDefault()
-    setStatus('submitting')
-
-    const payload = {
-      ...formData,
-      fullName: `${formData.firstName} ${formData.lastName}`.trim(),
-      source: 'Hero Consultation Form',
-      submittedAt: new Date().toISOString()
-    }
-
-    try {
-      const res = await fetch('https://services.leadconnectorhq.com/hooks/BmDGr9v8BWg4jVdMTmNA/webhook-trigger/5fe7aeea-0387-4917-8baf-3c73747f6bbb', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      })
-
-      if (res.ok || res.type === 'opaque') {
-        setStatus('success')
-      } else {
-        // Fallback for CORS or non-200 while hook still received
-        setStatus('success')
-      }
-    } catch (err) {
-      console.warn('Webhook delivery handled:', err)
-      // Even if blocked by browser adblock/CORS, treat as received or display friendly confirmation
-      setStatus('success')
+    const target = document.getElementById('estimate')
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      window.location.href = '#estimate'
     }
   }
 
   return (
-    <section className="relative bg-[#1A262C] text-white pt-8 pb-16 lg:pt-14 lg:pb-20 overflow-hidden border-b border-stone-800">
-      {/* Background Architectural Overlay */}
-      <div 
-        className="absolute inset-0 opacity-15 bg-cover bg-center pointer-events-none mix-blend-overlay"
-        style={{ backgroundImage: "url('/images/projects/hero-composite-sunset.jpg')" }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1A262C]/90 via-[#1A262C]/95 to-[#1A262C] pointer-events-none" />
+    <>
+      {/* Floating Vertical Right Tab: GET A CONSULTATION (1:1 with Legacy Decks screenshot) */}
+      <aside aria-label="Quick Consultation Access" className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden sm:block">
+        <a
+          href="#estimate"
+          onClick={scrollToEstimate}
+          className="bg-[#C5221F] hover:bg-[#A31816] text-white text-[11px] font-heading font-extrabold uppercase tracking-widest py-4 px-2.5 rounded-l shadow-2xl flex items-center justify-center [writing-mode:vertical-rl] transition-transform hover:-translate-x-1 cursor-pointer border-l border-t border-b border-red-400/30"
+          style={{ textOrientation: 'mixed' }}
+        >
+          GET A CONSULTATION
+        </a>
+      </aside>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      {/* Main Full-Bleed Hero Section (Matching Screenshot media_1792075512059_abc6cbc0.png 1:1) */}
+      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between text-white overflow-hidden">
+        {/* Full-Bleed Panoramic Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-100"
+          style={{ 
+            backgroundImage: "url('/images/projects/hero-composite-sunset.jpg')",
+            backgroundPosition: 'center 45%'
+          }}
+        />
+
+        {/* Cinematic Dark Gradient Vignette Overlay for Crisp Readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/75 pointer-events-none" />
+
+        {/* Top Spacer to balance navbar */}
+        <div className="pt-12 sm:pt-16" />
+
+        {/* Centered Hero Content */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 py-12">
           
-          {/* Left Column: Direct-Response Value Proposition */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
-            
-            {/* Pill Eyebrow */}
-            <div className="inline-flex items-center gap-2 self-start bg-white/10 border border-white/15 px-3.5 py-1.5 rounded-full text-xs font-sans tracking-wide text-white/90 mb-5">
-              <span className="w-2 h-2 rounded-full bg-[#B87333] animate-pulse" />
-              <span className="uppercase tracking-widest font-semibold text-[11px] text-[#E0A96D]">The Upstate's Premier Deck & Porch Builder</span>
-            </div>
+          {/* Main Headline */}
+          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.1] mb-5 drop-shadow-md">
+            Custom Outdoor Living, <br className="hidden sm:inline" />
+            Designed for the Way You Live
+          </h1>
 
-            {/* Main Headline - Aligned with high-converting outdoor living copy */}
-            <h1 className="font-heading font-extrabold text-3xl sm:text-5xl lg:text-[54px] tracking-tight leading-[1.12] text-white mb-5">
-              Custom Outdoor Living, <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-stone-100 to-[#E0A96D]">
-                Designed for the Way You Live.
-              </span>
-            </h1>
+          {/* Sub-headline */}
+          <p className="font-sans text-base sm:text-lg md:text-xl text-white/95 max-w-3xl mx-auto font-normal leading-relaxed mb-10 drop-shadow">
+            Thoughtfully Designed. Expertly Built. Professionally Managed.
+          </p>
 
-            {/* Sub-headline */}
-            <h2 className="font-heading font-medium text-lg sm:text-xl text-[#E0A96D] mb-4">
-              Thoughtfully Designed. Expertly Built. Professionally Managed.
-            </h2>
-
-            {/* Clarifying Lead Paragraph */}
-            <p className="font-sans text-sm sm:text-base text-stone-300 max-w-2xl leading-relaxed mb-6">
-              Create an outdoor living space that feels like a natural extension of your home. Conick Construction combines thoughtful 3D design, premium TimberTech composite & heavy timber, and an owner-led proven process across Woodruff, Greenville, and Spartanburg, SC.
-            </p>
-
-            {/* Direct Call & Trust Points */}
-            <div className="flex flex-wrap items-center gap-4 mb-8">
-              <a
-                href="tel:+17813991906"
-                className="inline-flex items-center gap-3 bg-[#B87333] hover:bg-[#965B27] text-white font-heading font-bold text-sm tracking-wider uppercase px-6 py-3.5 rounded shadow-lg transition-all active:scale-[0.98]"
-              >
-                <Phone className="w-4 h-4 text-white" />
-                <span>Call Now: (781) 399-1906</span>
-              </a>
-
-              <a
-                href="#process"
-                className="inline-flex items-center gap-2 text-stone-300 hover:text-white font-sans text-sm underline underline-offset-4 decoration-[#B87333] transition-colors"
-              >
-                <span>See Our 5-Step Proven Process</span>
-                <ArrowRight className="w-4 h-4 text-[#B87333]" />
-              </a>
-            </div>
-
-            {/* 4 Trust Pillars */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/10">
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-white text-sm flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#B87333]" />
-                  Licensed & Insured
-                </span>
-                <span className="text-xs text-stone-400 mt-0.5">SC General Contractor</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-white text-sm flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-[#B87333]" />
-                  10-Yr Warranty
-                </span>
-                <span className="text-xs text-stone-400 mt-0.5">Structural Craftsmanship</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-white text-sm flex items-center gap-1.5">
-                  <Clock className="w-4 h-4 text-[#B87333]" />
-                  On-Time Guarantee
-                </span>
-                <span className="text-xs text-stone-400 mt-0.5">Meticulous Scheduling</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-white text-sm flex items-center gap-1.5">
-                  <MapPin className="w-4 h-4 text-[#B87333]" />
-                  Upstate Local
-                </span>
-                <span className="text-xs text-stone-400 mt-0.5">Woodruff • GVL • SPB</span>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Right Column: High-Converting Above-the-Fold Consultation Card */}
-          <div className="lg:col-span-5 relative">
-            <div className="bg-[#24343D] border border-white/15 rounded-xl shadow-2xl p-6 sm:p-7 relative overflow-hidden backdrop-blur-sm">
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#B87333] via-[#E0A96D] to-[#B87333]" />
-              
-              <div className="mb-5">
-                <span className="text-[11px] font-mono uppercase tracking-widest text-[#E0A96D] font-bold block mb-1">
-                  Schedule Your Free Consultation
-                </span>
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-white">
-                  Bring Your Vision To Life
-                </h3>
-                <p className="text-xs text-stone-300 mt-1">
-                  Fill out this quick form. Renato or our lead design specialist will contact you within 24 hours.
-                </p>
-              </div>
-
-              {status === 'success' ? (
-                <div className="bg-[#1A262C] border border-emerald-500/30 rounded-lg p-6 text-center animate-fadeIn">
-                  <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-3">
-                    <Check className="w-6 h-6" />
-                  </div>
-                  <h4 className="font-heading font-bold text-lg text-white mb-2">Consultation Requested!</h4>
-                  <p className="text-xs text-stone-300 leading-relaxed mb-4">
-                    Thank you, {formData.firstName}! We’ve received your outdoor living project details and will call you shortly at <span className="text-white font-semibold">{formData.phone}</span> to coordinate your on-site walkthrough.
-                  </p>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setStatus('idle')
-                      setFormData({
-                        firstName: '',
-                        lastName: '',
-                        phone: '',
-                        email: '',
-                        address: '',
-                        projectType: 'Custom Composite Deck',
-                        budget: '$30,000 – $50,000',
-                        notes: ''
-                      })
-                    }}
-                    className="text-xs text-[#E0A96D] hover:underline font-semibold"
-                  >
-                    Submit another request
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-3.5">
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-[11px] font-medium text-stone-300 mb-1">First Name *</label>
-                      <input
-                        type="text"
-                        name="firstName"
-                        required
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        placeholder="John"
-                        className="w-full bg-[#1A262C] border border-stone-600 rounded px-3 py-2 text-xs text-white placeholder-stone-500 focus:outline-none focus:border-[#B87333]"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-[11px] font-medium text-stone-300 mb-1">Last Name *</label>
-                      <input
-                        type="text"
-                        name="lastName"
-                        required
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        placeholder="Smith"
-                        className="w-full bg-[#1A262C] border border-stone-600 rounded px-3 py-2 text-xs text-white placeholder-stone-500 focus:outline-none focus:border-[#B87333]"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-[11px] font-medium text-stone-300 mb-1">Phone Number *</label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        required
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="(864) 555-0199"
-                        className="w-full bg-[#1A262C] border border-stone-600 rounded px-3 py-2 text-xs text-white placeholder-stone-500 focus:outline-none focus:border-[#B87333]"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-[11px] font-medium text-stone-300 mb-1">Email Address *</label>
-                      <input
-                        type="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="john@example.com"
-                        className="w-full bg-[#1A262C] border border-stone-600 rounded px-3 py-2 text-xs text-white placeholder-stone-500 focus:outline-none focus:border-[#B87333]"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-[11px] font-medium text-stone-300 mb-1">Project Type</label>
-                      <select
-                        name="projectType"
-                        value={formData.projectType}
-                        onChange={handleChange}
-                        className="w-full bg-[#1A262C] border border-stone-600 rounded px-2.5 py-2 text-xs text-white focus:outline-none focus:border-[#B87333]"
-                      >
-                        <option value="Custom Composite Deck">Custom Composite Deck</option>
-                        <option value="Covered Porch Addition">Covered Porch Addition</option>
-                        <option value="Screened-In Porch">Screened-In Porch</option>
-                        <option value="Complete Deck Replacement">Complete Deck Replacement</option>
-                        <option value="Multi-Level Outdoor Living">Multi-Level Outdoor Living</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-[11px] font-medium text-stone-300 mb-1">Estimated Budget</label>
-                      <select
-                        name="budget"
-                        value={formData.budget}
-                        onChange={handleChange}
-                        className="w-full bg-[#1A262C] border border-stone-600 rounded px-2.5 py-2 text-xs text-white focus:outline-none focus:border-[#B87333]"
-                      >
-                        <option value="$15,000 – $30,000">$15,000 – $30,000</option>
-                        <option value="$30,000 – $50,000">$30,000 – $50,000</option>
-                        <option value="$50,000 – $75,000">$50,000 – $75,000</option>
-                        <option value="$75,000+">$75,000+</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-[11px] font-medium text-stone-300 mb-1">Address / Town in Upstate SC</label>
-                    <input
-                      type="text"
-                      name="address"
-                      value={formData.address}
-                      onChange={handleChange}
-                      placeholder="e.g. Woodruff, Greenville, Spartanburg..."
-                      className="w-full bg-[#1A262C] border border-stone-600 rounded px-3 py-2 text-xs text-white placeholder-stone-500 focus:outline-none focus:border-[#B87333]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-[11px] font-medium text-stone-300 mb-1">Project Details (Optional)</label>
-                    <textarea
-                      name="notes"
-                      rows={2}
-                      value={formData.notes}
-                      onChange={handleChange}
-                      placeholder="Tell us about your yard slope, size, or preferred materials..."
-                      className="w-full bg-[#1A262C] border border-stone-600 rounded px-3 py-1.5 text-xs text-white placeholder-stone-500 focus:outline-none focus:border-[#B87333] resize-none"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={status === 'submitting'}
-                    className="w-full bg-[#B87333] hover:bg-[#965B27] disabled:opacity-70 text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded shadow-lg transition-all flex items-center justify-center gap-2 mt-2"
-                  >
-                    {status === 'submitting' ? (
-                      <>
-                        <Loader2 className="w-4 h-4 animate-spin" />
-                        <span>Sending Request...</span>
-                      </>
-                    ) : (
-                      <>
-                        <span>Get A Free Consultation</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </>
-                    )}
-                  </button>
-
-                  <div className="flex items-center justify-center gap-4 text-[10px] text-stone-400 pt-1">
-                    <span className="flex items-center gap-1">
-                      <ShieldCheck className="w-3 h-3 text-[#B87333]" />
-                      Zero Obligation
-                    </span>
-                    <span>•</span>
-                    <span className="flex items-center gap-1">
-                      <Check className="w-3 h-3 text-[#B87333]" />
-                      Fast 24h Response
-                    </span>
-                    <span>•</span>
-                    <span>Privacy Protected</span>
-                  </div>
-                </form>
-              )}
-            </div>
+          {/* Centered CTA Button (Exact Legacy Decks Outline/Translucent Button Style) */}
+          <div className="flex items-center justify-center">
+            <a
+              href="#estimate"
+              onClick={scrollToEstimate}
+              className="inline-block border-2 border-white/90 hover:border-[#B87333] bg-black/40 hover:bg-[#B87333] text-white text-xs sm:text-sm font-heading font-bold uppercase tracking-widest px-8 sm:px-10 py-3.5 sm:py-4 rounded shadow-2xl backdrop-blur-sm transition-all duration-300 hover:scale-105 active:scale-95"
+            >
+              GET A CONSULTATION
+            </a>
           </div>
 
         </div>
-      </div>
-    </section>
+
+        {/* Bottom Trust Strip Badges (1:1 with Screenshot Badges Row) */}
+        <div className="relative z-10 w-full pb-8 sm:pb-12 pt-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
+              
+              {/* Badge 1: Google Reviews 5 Stars */}
+              <div className="bg-white px-3.5 sm:px-5 py-2 sm:py-2.5 rounded shadow-lg flex flex-col items-center justify-center border border-stone-200 min-w-[130px] sm:min-w-[155px] h-[58px] sm:h-[66px] transition-transform hover:scale-105">
+                <div className="flex items-center gap-1 mb-0.5">
+                  <span className="text-[10px] sm:text-[11px] font-bold text-stone-700">5 Stars</span>
+                  <div className="flex text-[#FBBC05]">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-current" />
+                    ))}
+                  </div>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span className="font-heading font-extrabold text-sm sm:text-base tracking-tight">
+                    <span className="text-[#4285F4]">G</span>
+                    <span className="text-[#EA4335]">o</span>
+                    <span className="text-[#FBBC05]">o</span>
+                    <span className="text-[#4285F4]">g</span>
+                    <span className="text-[#34A853]">l</span>
+                    <span className="text-[#EA4335]">e</span>
+                  </span>
+                  <span className="text-[9px] sm:text-[10px] font-sans font-semibold text-stone-600 uppercase tracking-wider ml-1">Reviews</span>
+                </div>
+              </div>
+
+              {/* Badge 2: Approved Professional Builder */}
+              <div className="bg-[#1E2D35]/95 backdrop-blur-sm border border-white/20 px-3.5 sm:px-4 py-2 rounded shadow-lg flex items-center gap-2.5 min-w-[140px] sm:min-w-[165px] h-[58px] sm:h-[66px] transition-transform hover:scale-105">
+                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20 shrink-0">
+                  <HardHat className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                </div>
+                <div className="text-left">
+                  <span className="block text-[8px] font-mono uppercase tracking-widest text-[#E0A96D] font-bold">APPROVED</span>
+                  <span className="block text-[10px] sm:text-[11px] font-heading font-extrabold text-white leading-tight uppercase">Professional<br/>Builder</span>
+                </div>
+              </div>
+
+              {/* Badge 3: TimberTech Platinum Pro Elite */}
+              <div className="bg-[#141C20]/95 backdrop-blur-sm border border-[#C5A059]/50 px-3.5 sm:px-4 py-2 rounded shadow-lg flex items-center gap-2.5 min-w-[140px] sm:min-w-[165px] h-[58px] sm:h-[66px] transition-transform hover:scale-105">
+                <div className="w-8 h-8 rounded bg-gradient-to-br from-[#E0A96D] via-[#B87333] to-[#8C5226] flex items-center justify-center font-heading font-extrabold text-xs text-white shadow shrink-0">
+                  TT
+                </div>
+                <div className="text-left">
+                  <span className="block text-[10px] sm:text-[11px] font-heading font-bold text-[#E0A96D] tracking-wide leading-tight">TimberTech</span>
+                  <span className="block text-[8px] sm:text-[9px] font-mono uppercase tracking-wider text-white/90 font-semibold">Platinum Pro</span>
+                </div>
+              </div>
+
+              {/* Badge 4: BBB Accredited Business */}
+              <div className="bg-[#005A70]/95 backdrop-blur-sm text-white px-3.5 sm:px-4 py-2 rounded shadow-lg flex items-center gap-2.5 min-w-[140px] sm:min-w-[165px] h-[58px] sm:h-[66px] border border-cyan-400/30 transition-transform hover:scale-105">
+                <div className="font-serif font-black text-lg sm:text-xl tracking-tighter text-white border-r border-white/30 pr-2 shrink-0">
+                  BBB
+                </div>
+                <div className="text-left">
+                  <span className="block text-[8px] sm:text-[9px] font-sans font-bold uppercase tracking-wider text-cyan-200">Accredited</span>
+                  <span className="block text-[10px] sm:text-[11px] font-heading font-extrabold text-white uppercase leading-none">Business</span>
+                </div>
+              </div>
+
+              {/* Badge 5: NADRA (North American Deck and Railing Association) */}
+              <div className="bg-white px-3.5 sm:px-4 py-2 rounded shadow-lg flex items-center gap-2.5 min-w-[140px] sm:min-w-[165px] h-[58px] sm:h-[66px] border border-stone-200 transition-transform hover:scale-105">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded bg-[#2D5A27] flex items-center justify-center text-white font-heading font-black text-xs shrink-0 shadow-sm">
+                  N
+                </div>
+                <div className="text-left">
+                  <span className="block text-[11px] sm:text-[13px] font-heading font-black tracking-tight text-[#2D5A27] leading-none">NADRA</span>
+                  <span className="block text-[8px] sm:text-[9px] font-sans text-stone-600 leading-tight">Deck & Railing Assoc.</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   )
 }

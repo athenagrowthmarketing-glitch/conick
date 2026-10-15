@@ -7,6 +7,7 @@ import PorchesShowcase from '../components/PorchesShowcase'
 import BeforeAfterSlider from '../components/BeforeAfterSlider'
 import CraftsmanshipDetails from '../components/CraftsmanshipDetails'
 import PortfolioGrid from '../components/PortfolioGrid'
+import MasterGallery from '../components/MasterGallery'
 import ProcessSection from '../components/ProcessSection'
 import ReviewsSection from '../components/ReviewsSection'
 import AboutSection from '../components/AboutSection'
@@ -26,6 +27,12 @@ export default function HomePage() {
       <BeforeAfterSlider />
       <CraftsmanshipDetails />
       <PortfolioGrid />
+      <MasterGallery 
+        title="Complete Upstate SC Project Archive (100+ Real Builds)"
+        subtitle="Filter by composite decks, covered porches, engineered framing, custom carpentry, and drone surveys. No stock photos."
+        maxInitial={12}
+        showFilters={true}
+      />
       <ProcessSection />
       <ReviewsSection />
       <AboutSection />
