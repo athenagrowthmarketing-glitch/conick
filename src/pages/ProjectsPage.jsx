@@ -21,10 +21,10 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Master 101-Photo Gallery */}
+      {/* Master Portfolio Gallery */}
       <MasterGallery 
-        title="Complete Portfolio of 100+ Completed Builds"
-        subtitle="Filter by composite decks, covered porches, engineered framing, and custom craftsmanship details. Every single project is an authentic Conick Construction jobsite in Upstate SC."
+        title="Complete Portfolio of Verified Builds"
+        subtitle="Filter by composite decks, covered porches, engineered framing, and custom craftsmanship details. Every photo is an authentic Conick Construction jobsite."
         maxInitial={24}
         showFilters={true}
       />

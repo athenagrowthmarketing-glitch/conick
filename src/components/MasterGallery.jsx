@@ -111,10 +111,6 @@ export default function MasterGallery({ title, subtitle, maxInitial = 16, showFi
 
               <div className="p-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-1.5 text-xs text-[#B87333] font-medium mb-1">
-                    <MapPin className="w-3.5 h-3.5" />
-                    <span>{project.location}</span>
-                  </div>
                   <h3 className="font-heading font-bold text-sm text-[#11181C] line-clamp-1 group-hover:text-[#B87333] transition-colors">
                     {project.title}
                   </h3>
@@ -162,9 +158,8 @@ export default function MasterGallery({ title, subtitle, maxInitial = 16, showFi
                   {currentProject.category.toUpperCase()}
                 </span>
                 <span className="text-stone-300">•</span>
-                <span className="text-xs font-sans text-stone-600 flex items-center gap-1">
-                  <MapPin className="w-3.5 h-3.5 text-[#B87333]" />
-                  {currentProject.location}
+                <span className="text-xs font-sans text-stone-600">
+                  Conick Construction Verified Project
                 </span>
               </div>
 

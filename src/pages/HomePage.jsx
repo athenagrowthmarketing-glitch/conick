@@ -28,8 +28,8 @@ export default function HomePage() {
       <CraftsmanshipDetails />
       <PortfolioGrid />
       <MasterGallery 
-        title="Complete Upstate SC Project Archive (100+ Real Builds)"
-        subtitle="Filter by composite decks, covered porches, engineered framing, and custom carpentry details. No stock photos."
+        title="Completed Project Archive"
+        subtitle="Filter by composite decks, covered porches, engineered framing, and custom carpentry details. Every photo is authentic Conick Construction work."
         maxInitial={12}
         showFilters={true}
       />

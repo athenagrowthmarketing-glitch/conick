@@ -9,8 +9,7 @@ export default function PortfolioGrid() {
     {
       id: 1,
       category: 'decks',
-      title: "The Woodruff Multi-Level Estate Deck",
-      location: "Woodruff, SC",
+      title: "The Multi-Level Estate Deck",
       image: "/images/projects/deck-twotier-brick-angle.jpg",
       gallery: ["/images/projects/deck-twotier-brick-angle.jpg", "/images/projects/deck-luxury-composite-grey.jpg", "/images/projects/deck-composite-woodland-view.jpg"],
       specs: "Multi-tier layout • Low-maintenance composite • Powder-coated black railings • Integrated LED post caps",
@@ -20,7 +19,6 @@ export default function PortfolioGrid() {
       id: 2,
       category: 'decks',
       title: "The High-Stilt Deck & Weatherproof Storage",
-      location: "Greenville County, SC",
       image: "/images/projects/deck-composite-side-view.jpg",
       gallery: ["/images/projects/deck-composite-side-view.jpg", "/images/projects/detail-understair-composite-soffit.jpg", "/images/projects/deck-composite-stairs-ground.jpg"],
       specs: "Elevated framing • Custom horizontal slatted skirting • Hinged latch storage door • Fall foliage views",
@@ -30,7 +28,6 @@ export default function PortfolioGrid() {
       id: 3,
       category: 'decks',
       title: "The Brick Manor Grand Terrace",
-      location: "Upstate SC",
       image: "/images/projects/drone-brick-manor-full.jpg",
       gallery: ["/images/projects/drone-brick-manor-full.jpg", "/images/projects/drone-estate-brick-terrace.jpg", "/images/projects/deck-estate-sunlight.jpg"],
       specs: "Dual grand staircases • Symmetrical egress • Custom balusters • Reinforced foundation footers",
@@ -40,7 +37,6 @@ export default function PortfolioGrid() {
       id: 4,
       category: 'details',
       title: "Custom Built-In Perimeter Lounge Deck",
-      location: "Spartanburg, SC",
       image: "/images/projects/drone-geometric-chevron-deck.jpg",
       gallery: ["/images/projects/drone-geometric-chevron-deck.jpg", "/images/projects/deck-composite-bench-solar-caps.jpg", "/images/projects/detail-composite-bench-corner.jpg"],
       specs: "Integrated L-bench • Stone retaining wall tie-in • Solar cap lights • Concealed clip system",
@@ -50,7 +46,6 @@ export default function PortfolioGrid() {
       id: 5,
       category: 'porches',
       title: "Two-Story Deck & Covered Lower Veranda",
-      location: "Anderson, SC",
       image: "/images/projects/porch-covered-outdoor-living-kitchen.jpg",
       gallery: ["/images/projects/porch-covered-outdoor-living-kitchen.jpg", "/images/projects/deck-twostory-covered-lower.jpg", "/images/projects/porch-covered-twostory-view.jpg"],
       specs: "Upper sun deck • Sheltered lower patio • Architectural post wrapping • Moisture drainage barrier",
@@ -60,7 +55,6 @@ export default function PortfolioGrid() {
       id: 6,
       category: 'porches',
       title: "Architectural Roofline Porch Addition",
-      location: "Upstate SC",
       image: "/images/projects/porch-screened-room-combo.jpg",
       gallery: ["/images/projects/porch-screened-room-combo.jpg", "/images/projects/porch-screened-side-elevation.jpg"],
       specs: "Heavy timber posts • Seamless roofline tie-in • Exterior trim integration • Weatherproof flashing",
@@ -138,10 +132,6 @@ export default function PortfolioGrid() {
 
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-1.5 text-xs text-[#B87333] font-medium mb-1.5">
-                    <MapPin className="w-3.5 h-3.5" />
-                    <span>{project.location}</span>
-                  </div>
                   <h3 className="font-heading font-bold text-lg text-[#11181C] mb-2 group-hover:text-[#B87333] transition-colors">
                     {project.title}
                   </h3>
@@ -186,10 +176,6 @@ export default function PortfolioGrid() {
 
               {/* Project Content */}
               <div className="p-6 sm:p-8">
-                <div className="flex items-center gap-2 text-xs text-[#B87333] font-semibold mb-2">
-                  <MapPin className="w-3.5 h-3.5" />
-                  <span>{selectedProject.location}</span>
-                </div>
                 <h3 className="font-heading font-extrabold text-2xl text-[#11181C] mb-3">
                   {selectedProject.title}
                 </h3>

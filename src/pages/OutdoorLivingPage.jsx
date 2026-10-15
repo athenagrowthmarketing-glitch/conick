@@ -699,10 +699,10 @@ export default function OutdoorLivingPage() {
       {/* Real Backyard Transformations (Before/After Slider with Authentic Client Jobs) */}
       <BeforeAfterSlider />
 
-      {/* Complete Project Archive (100+ Jobs) */}
+      {/* Complete Project Archive */}
       <MasterGallery 
-        title="Complete Portfolio of 100+ Real Builds"
-        subtitle="Explore verified custom composite decks, covered porches, engineered framing, and architectural details across Upstate South Carolina."
+        title="Complete Portfolio of Real Builds"
+        subtitle="Explore verified custom composite decks, covered porches, engineered framing, and architectural details."
         maxInitial={16}
         showFilters={true}
       />

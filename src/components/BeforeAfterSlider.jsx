@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react'
-import { ArrowLeftRight, CheckCircle2, AlertTriangle, ShieldCheck, MapPin, Sparkles } from 'lucide-react'
+import { ArrowLeftRight, CheckCircle2, AlertTriangle, ShieldCheck, Sparkles } from 'lucide-react'
 
 export default function BeforeAfterSlider() {
   const [activeJob, setActiveJob] = useState(0)
@@ -12,7 +12,6 @@ export default function BeforeAfterSlider() {
       id: "grey-composite",
       tabTitle: "Deck Replacement 01",
       title: "Weathered Deck ➔ Modern Composite Living",
-      location: "Greenville County, SC",
       beforeLabel: "Before: Rotting & Splintered Wood",
       afterLabel: "After: Low-Maintenance Composite",
       beforeImg: "/images/projects/before-rotted-deck-grey.jpg",
@@ -23,7 +22,6 @@ export default function BeforeAfterSlider() {
       id: "brick-twotier",
       tabTitle: "Deck Replacement 02",
       title: "Failing Elevated Deck ➔ Two-Tier Natural Wood",
-      location: "Woodruff, SC",
       beforeLabel: "Before: Unsafe Elevated Framing",
       afterLabel: "After: Multi-Level Custom Deck",
       beforeImg: "/images/projects/before-rotted-deck-brick.jpg",
@@ -34,7 +32,6 @@ export default function BeforeAfterSlider() {
       id: "green-elevated",
       tabTitle: "Deck Replacement 03",
       title: "Weathered Steps ➔ Heavy-Post Elevated Deck",
-      location: "Spartanburg, SC",
       beforeLabel: "Before: Rotted Wood Steps",
       afterLabel: "After: Engineered Hillside Deck",
       beforeImg: "/images/projects/before-steps-green-house.jpg",
@@ -99,12 +96,8 @@ export default function BeforeAfterSlider() {
           ))}
         </div>
 
-        {/* Job Headline & Location */}
+        {/* Job Headline */}
         <div className="max-w-5xl mx-auto text-center mb-6">
-          <div className="inline-flex items-center gap-1.5 text-xs text-[#B87333] font-mono uppercase font-semibold mb-1">
-            <MapPin className="w-3.5 h-3.5" />
-            <span>{currentJob.location}</span>
-          </div>
           <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#11181C]">
             {currentJob.title}
           </h3>
